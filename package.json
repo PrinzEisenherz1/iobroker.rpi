@@ -27,18 +27,18 @@
     "grunt-contrib-copy": "^0.8.0",
     "grunt-exec": "^0.4.6"
   },
-  "homepage": "https://github.com/husky-koglhof/ioBroker.rpi",
+  "homepage": "https://github.com/KondorSoft/ioBroker.rpi",
   "license": "MIT",
   "keywords": ["ioBroker", "monitoring", "raspberry", "orangepi", "odroid", "bananapi"],
   "repository": {
     "type": "git",
-    "url": "https://github.com/husky-koglhof/ioBroker.rpi"
+    "url": "https://github.com/KondorSoft/ioBroker.rpi"
   },
   "os": [
     "linux"
   ],
   "bugs": {
-    "url": "https://github.com/husky-koglhof/ioBroker.rpi/issues"
+    "url": "https://github.com/KondorSoft/ioBroker.rpi/issues"
   },
   "main": "main.js",
   "readmeFilename": "README.md"

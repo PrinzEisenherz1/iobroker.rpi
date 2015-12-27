@@ -141,9 +141,9 @@
         },
         "temperature": {
             "soc_temp": {
-                "command": "cat /sys/devices/virtual/thermal/thermal_zone0/temp",
+                "command": "cat /sys/devices/virtual/hwmon/hwmon1/temp1_crit",
                 "regexp": "(.*)",
-                "post": "$1/1000"
+                "post": ""
             }
         },
         "uptime": {

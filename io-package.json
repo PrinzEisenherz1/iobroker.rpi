@@ -35,7 +35,7 @@
                 "post": "$1/1000"
             },
           "soc_temp": {
-                "command": "cat /sys/devices/virtual/hwmon/hwmon1/temp1_crit",
+                "command": "cat /sys/devices/virtual/hwmon/hwmon1/temp1_input",
                 "regexp": "(.*)",
                 "post": ""
             },

@@ -34,6 +34,11 @@
                 "regexp": "(.*)",
                 "post": "$1/1000"
             },
+          "soc_temp": {
+                "command": "cat /sys/devices/virtual/hwmon/hwmon1/temp1_crit",
+                "regexp": "(.*)",
+                "post": ""
+            }
             "load1,load5,load15": {
                 "command": "cat /proc/loadavg",
                 "regexp": "^(\\S+)\\s(\\S+)\\s(\\S+)",
@@ -62,10 +67,10 @@
                 "post": "$1/1024",
                 "multiline": true
             },
-            "swap_used": {
+            "swap_free": {
                 "command": "cat /proc/meminfo",
                 "regexp": "SwapFree:\\s+(\\d+)",
-                "post": "rpi.swap_total - ($1/1024)",
+                "post": "$1/1024",
                 "multiline": true
             },
             "memory_available": {

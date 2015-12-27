@@ -11,7 +11,7 @@
         "mode":                     "daemon",
         "platform":                 "javascript/Node.js",
         "os":                       ["linux", "darwin"],
-        "loglevel":                 "debug",
+        "loglevel":                 "info",
         "keywords":                 ["ioBroker", "monitoring", "raspberry", "orangepi", "odroid", "bananapi"],
         "main":                     "main.js",
         "authors": [
@@ -19,10 +19,10 @@
         ],
         "license":                  "MIT",
         "singletonHost":             true,
-        "readme":                   "https://github.com/hKondorSoft/ioBroker.rpi/blob/master/README.md",
+        "readme":                   "https://github.com/husky-koglhof/ioBroker.rpi/blob/master/README.md",
         "icon":                     "rpi-monitor.png",
         "type":                     "hardware",
-        "extIcon":                  "https://raw.githubusercontent.com/KondorSoft/ioBroker.rpi/master/admin/rpi-monitor.png"
+        "extIcon":                  "https://raw.githubusercontent.com/husky-koglhof/ioBroker.rpi/master/admin/rpi-monitor.png"
     },
     "native": {
         "c_cpu": true,
@@ -33,11 +33,6 @@
                 "command": "cat /sys/devices/system/cpu/cpu0/cpufreq/cpuinfo_cur_freq",
                 "regexp": "(.*)",
                 "post": "$1/1000"
-            },
-            "soc_temp": {
-                "command": "cat /sys/devices/virtual/hwmon/hwmon1/temp1_crit",
-                "regexp": "(.*)",
-                "post": ""
             },
             "load1,load5,load15": {
                 "command": "cat /proc/loadavg",
@@ -61,18 +56,6 @@
                 "regexp": "MemFree:\\s+(\\d+)",
                 "post": "$1/1024"
             },
-             "swap_total": {
-                "command": "cat /proc/meminfo",
-                "regexp": "SwapTotal:\\s+(\\d+)",
-                "post": "$1/1024",
-                "multiline": true
-            },
-            "swap_used": {
-                "command": "cat /proc/meminfo",
-                "regexp": "SwapFree:\\s+(\\d+)",
-                "post": "rpi.swap_total - ($1/1024)",
-                "multiline": true
-            },
             "memory_available": {
                 "command": "/usr/bin/free -mk",
                 "regexp": "^-\\/\\+ buffers\\/cache:\\s+\\d+\\s+(\\d+)",
@@ -80,6 +63,7 @@
                 "multiline": true
             }
         },
+    },
     "objects": [
     ],
     "instanceObjects": [

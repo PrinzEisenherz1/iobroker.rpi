@@ -38,7 +38,7 @@
                 "command": "cat /sys/devices/virtual/hwmon/hwmon1/temp1_crit",
                 "regexp": "(.*)",
                 "post": ""
-            }
+            },
             "load1,load5,load15": {
                 "command": "cat /proc/loadavg",
                 "regexp": "^(\\S+)\\s(\\S+)\\s(\\S+)",
